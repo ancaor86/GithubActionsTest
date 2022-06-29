@@ -20,7 +20,7 @@ jobs:
     - name: Test jq feature
       id: user
       run: |
-      USER="$({ "user":"stedolan", "title": "JQ Primer"} | jq '.user')"
+      USER="$('{ "user":"stedolan", "title": "JQ Primer"}' | jq '.user')"
       echo $USER
       echo "::set-output name=user-output::$USER"
     - name: Test if statement
