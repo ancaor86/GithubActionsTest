@@ -14,20 +14,22 @@ jobs:
         java.version: '11'
         distribution: 'adopt'
     - name: Validate jq version
-      run: jq --version
+      run: |
+        jq --version
     - name: Validate mvn version
-      run: mvn --version
+      run: |
+        mvn --version
     - name: Test jq feature
       id: user
       run: |
-      USER="$('{ "user":"stedolan", "title": "JQ Primer"}' | jq '.user')"
-      echo $USER
-      echo "::set-output name=user-output::$USER"
+        USER="$('{ "user":"stedolan", "title": "JQ Primer"}' | jq '.user')"
+        echo $USER
+        echo "::set-output name=user-output::$USER"
     - name: Test if statement
       env:
         USER_OUTPUT: ${{ steps.user.outputs.user-output }}
-    run: |
-      if [[ $USER_OUTPUT == '"stedolan"'  ]]
-      then
-      echo $USER_OUTPUT
-      fi
+      run: |
+        if [[ $USER_OUTPUT == '"stedolan"'  ]]
+        then
+        echo $USER_OUTPUT
+        fi
