@@ -1,7 +1,7 @@
 if [[ $GLOBAL == "Global Environment"  ]]
 then
 echo $GLOBAL
-echo $OS-NAME
+echo $OS_NAME
 fi
 
 STATUS='"UPLOADING"'
