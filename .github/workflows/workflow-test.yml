@@ -30,7 +30,7 @@ jobs:
       - name: Test if statement
         env:
           USER_OUTPUT: ${{ steps.user.outputs.user-output }}
-          LOCAL: $GLOBAL
+          LOCAL: "$GLOBAL"
           TEXT: This is an example
         run: |
           if [[ $USER_OUTPUT == '"stedolan"'  ]]
