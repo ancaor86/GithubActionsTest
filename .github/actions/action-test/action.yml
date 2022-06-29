@@ -1,0 +1,13 @@
+name: Run action test
+inputs:
+  os-name:
+    description: Name of the OS
+    required: true
+outputs:
+  action-output:
+    descripton: Output
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/run.sh
+    shell: bash

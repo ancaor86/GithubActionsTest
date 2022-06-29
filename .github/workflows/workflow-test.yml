@@ -40,3 +40,13 @@ jobs:
           echo $GLOBAL
           echo $TEXT
           fi
+      - name: Run action
+        id: run-action
+        env:
+          OS_NAME: iOS
+          ACTION_OUTPUT: ${{ steps.run-action.outputs.action-output }}
+        uses: ./.github/actions/action-test
+        with:
+          os-name: $OS_NAME
+      - name: Print result
+        run: echo $ACTION_OUTPUT
