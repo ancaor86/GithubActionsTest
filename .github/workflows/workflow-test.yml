@@ -44,10 +44,8 @@ jobs:
           fi
       - name: Run action
         id: run-action
-        uses: ./.github/actions/action-test
-        with:
-          os-name: iOS
-      - name: Print result
         env:
-          ACTION_OUTPUT: ${{ steps.run-action.outputs.action-output }}
+          OS-NAME: iOS
+        uses: ./.github/actions/action-test
+      - name: Print result
         run: echo $ACTION_OUTPUT

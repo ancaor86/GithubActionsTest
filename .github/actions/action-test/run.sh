@@ -1,7 +1,7 @@
 if [[ $GLOBAL == "Global Environment"  ]]
 then
 echo $GLOBAL
-echo Hello ${{ inputs.os-name }}
+echo $OS-NAME
 fi
 
 STATUS='"UPLOADING"'
@@ -12,4 +12,4 @@ STATUS='"SUCCEEDED"'
 done
 
 echo $STATUS
-echo "::set-output name=action-output::$STATUS"
+echo "ACTION_OUTPUT=$STATUS" >> $GITHUB_ENV
