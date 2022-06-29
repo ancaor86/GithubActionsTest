@@ -9,7 +9,7 @@ while [ "$STATUS" != '"SUCCEEDED"' ]
 do
 echo "UPLOADING..."
 STATUS='"SUCCEEDED"'
-echo STATUS
+echo $STATUS
 done
 
 echo "::set-output name=action-output::$STATUS"
