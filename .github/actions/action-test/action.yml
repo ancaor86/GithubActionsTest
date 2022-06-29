@@ -5,7 +5,7 @@ inputs:
     required: true
 outputs:
   action-output:
-    descripton: Output
+    description: Output
 runs:
   using: "composite"
   steps:
