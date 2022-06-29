@@ -10,4 +10,4 @@ runs:
   using: "composite"
   steps:
     - run: ${{ github.action_path }}/run.sh
-    shell: bash
+      shell: bash
