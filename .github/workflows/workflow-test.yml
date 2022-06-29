@@ -37,5 +37,6 @@ jobs:
           then
           echo $USER_OUTPUT
           echo $LOCAL
+          echo $GLOBAL
           echo $TEXT
           fi
